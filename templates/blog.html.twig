@@ -1,3 +1,5 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
 <div class="col">
                                 <div class="cell panel">
                                     <div class="body">
@@ -85,3 +87,5 @@
                                     </div>
                                 </div>
                             </div>
+{{ page.content }}
+{% endblock %}
