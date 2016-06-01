@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if header.description %}
+        <meta name="description" content="{{ header.description }}">
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        {% endif %}
+        {% if header.robots %}
+        <meta name="robots" content="{{ header.robots }}">
+        {% endif %}
+        <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.ico">
+
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+        {% block stylesheets %}
+            {# Foundation core CSS #}
+            {% do assets.add('theme://assets/css/cascade/production/build-full.min.css',101) %}
+
+        {# CSS FOR RELOADED #}
+            {% do assets.add('theme://assets/css/site.css',100) %}
+            {% do assets.add('theme://assets/css/cascade.css',100) %}
+
+            {{ assets.css() }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.add('theme://assets/js/module/jquery-2.1.1.min.js', 101) %}
+            {% do assets.add('theme://assets/js/site/base.js') %}
+
+            {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+                {% do assets.add('theme://assets/js/shim/iehtmlshiv.js') %}
+            {% endif %}
+
+            {{ assets.js() }}
+        {% endblock %}
+
+        {% endblock head %}
+    </head>
+
+      <body>
+
+        {# include the header + navigation #}
+        {% include 'partials/header.html.twig' %}
+
+        <div class="col">
+            <div class="cell panel">
+                <div class="body">
+                    <div class="cell">
+            {% block content %}{% endblock %}
+        </div>
+      </div>
+  </div>
+</div>
+        <div class="footer">
+            <div class="container">
+                <p class="text-muted">Cascade CSS for <a href="http://getgrav.org">Grav</a> by TNWARE.</p>
+            </div>
+        </div>
+    </body>
+    {% block bottom %}{% endblock %}
+</html>

@@ -1,0 +1,30 @@
+<body class="narrow">
+    <div class="site-center">
+        <div class="site-body">
+            <div class="site-header">
+                <div class="col width-fit mobile-width-fit">
+                    <div class="cell">
+                        <a href="#" class="logo"></a>
+                    </div>
+                </div>
+                <div class="col width-fill mobile-width-fill">
+                    <div class="cell">
+                        <ul class="col nav">
+                        {% for page in pages.children %}
+                        {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="cell">
+                    <div class="page-header">
+                        <h1>{{ page.menu }}</h1>
+                    </div>
+                </div>
+            </div>
