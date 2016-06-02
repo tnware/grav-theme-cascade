@@ -45,16 +45,10 @@
       <body>
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
-                <div class="body">
-                    <div class="cell">
-                    {% block content %}{% endblock %}
-                    </div>
-                </div>
-                <div class="footer">
-                      <p class="text-muted">Cascade CSS for <a href="http://getgrav.org">Grav</a> by TNWARE.</p>
-                </div>
-            </div>
-        </div>
+        {# include the body #}
+        {% include 'partials/body.html.twig' %}
+        {# include the footer #}
+        {% include 'partials/footer.html.twig' %}
     </body>
     {% block bottom %}{% endblock %}
 </html>
