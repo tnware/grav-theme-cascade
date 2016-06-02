@@ -29,8 +29,9 @@
         {% endblock %}
 
         {% block javascripts %}
-            {% do assets.add('theme://assets/js/module/jquery-2.1.1.min.js', 101) %}
+            {% do assets.add('theme://assets/js/module/jquery/jquery-2.1.1.min.js', 101) %}
             {% do assets.add('theme://assets/js/site/base.js') %}
+            {% do assets.add('theme://assets/js/app.js') %}
 
             {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
                 {% do assets.add('theme://assets/js/shim/iehtmlshiv.js') %}
@@ -43,17 +44,23 @@
     </head>
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
-        <div class="body">
-          <div class="col">
+
+        <div class="col">
             <div class="cell panel">
-              <div class="cell">
-            {% block content %}{% endblock %}
-             </div>
-           </div>
-         </div>
-       </div>
+              <div class="header">
+                  Header
+            </div>
+          <div class="body">
+          <div class="cell">
+          {% block content %}{% endblock %}
+          </div>
+          </div>
+      <div class="body">
         {# include the footer #}
         {% include 'partials/footer.html.twig' %}
+      </div>
+      </div>
+    </div>
     </body>
     {% block bottom %}{% endblock %}
 </html>

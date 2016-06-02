@@ -1,68 +1,32 @@
-{% extends 'partials/base.html.twig' %}
-{% block content %}
+{% extends 'partials/blog.html.twig' %}
 
-                                                    <section class="sitecontent">
-                                                        <section class="blogpost">
-                                                            <div class="cell">
-                                                                <header>
-                                                                    <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                                </header>
-                                                                <section>
-                                                                    Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                                    professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                                </section>
-                                                                <footer>
-                                                                    Wednesday 13<sup>th</sup> march, 2013
-                                                                </footer>
-                                                            </div>
-                                                        </section>
-                                                        <section class="blogpost">
-                                                            <div class="cell">
-                                                                <header>
-                                                                    <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                                </header>
-                                                                <section>
-                                                                    Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                                    professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                                </section>
-                                                                <footer>
-                                                                    Wednesday 13<sup>th</sup> march, 2013
-                                                                </footer>
-                                                            </div>
-                                                        </section>
-                                                        <section class="blogpost">
-                                                            <div class="cell">
-                                                                <header>
-                                                                    <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                                </header>
-                                                                <section>
-                                                                    Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                                    professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                                </section>
-                                                                <footer>
-                                                                    Wednesday 13<sup>th</sup> march, 2013
-                                                                </footer>
-                                                            </div>
-                                                        </section>
-                                                    </section>
-                                                    <footer class="pagefooter">
-                                                        <section>
-                                                            <div class="cell">
-                                                                <nav class="pipes">
-                                                                    <ul class="nav">
-                                                                        <li><a href="#">Sitemap</a></li>
-                                                                        <li><a href="#">About</a></li>
-                                                                        <li><a href="#">Contact us</a></li>
-                                                                    </ul>
-                                                                </nav>
-                                                            </div>
-                                                        </section>
-                                                    </footer>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-{{ page.content }}
-{% endblock %}
+{% set collection = page.collection() %}
+
+	{% block content %}
+		{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
+
+		{% if blog_image %}
+		<div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
+		{% else %}
+		<div class="blog-header">
+		{% endif %}
+			{{ page.content }}
+		</div>
+
+			{% if config.plugins.breadcrumbs.enabled %}
+				{% include 'partials/breadcrumbs.html.twig' %}
+			{% endif %}
+
+		<div class="content-wrapper blog-content-list grid pure-g">
+			<div id="listing" class="block pure-u-2-3">
+				{% for child in collection %}
+			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+			    {% endfor %}
+
+                {% if config.plugins.pagination.enabled and collection.params.pagination %}
+                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+                {% endif %}
+			</div>
+
+		</div>
+	{% endblock %}
