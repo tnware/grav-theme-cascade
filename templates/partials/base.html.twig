@@ -43,8 +43,11 @@
     </head>
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
-        {# include the body #}
-        {% include 'partials/body.html.twig' %}
+        <div class="body">
+            <div class="cell">
+            {% block content %}{% endblock %}
+            </div>
+        </div>
         {# include the footer #}
         {% include 'partials/footer.html.twig' %}
     </body>
