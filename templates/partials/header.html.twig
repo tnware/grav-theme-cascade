@@ -2,28 +2,53 @@
     <div class="site-center">
         <div class="site-body">
             <div class="site-header">
-                <div class="col width-fit mobile-width-fit">
+                <div class="tags sitemenutags">
                     <div class="cell">
-                        <a href="#" class="logo"></a>
-                    </div>
-                </div>
-                <div class="col width-fill mobile-width-fill">
-                    <div class="cell">
-                        <ul class="col nav">
-                        {% for page in pages.children %}
-                        {% if page.visible %}
-                        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
-                        {% endif %}
-                        {% endfor %}
+                        <ul class="nav blocks">
+                            <li><a href="https://github.com/jslegers/cascadeframework/archive/master.zip">Download v1.6</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="cell panel">
-                    <div class="header">
-                        {{ page.menu }}
+                <div class="col width-fill sitemenu">
+                    <div class="col width-fit mobile-width-fit">
+                        <div class="cell">
+                            <a href="index.html" class="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col width-fill mobile-width-fill">
+                        <div class="cell">
+                            <ul class="nav">
+                            {% for page in pages.children %}
+                            {% if page.visible %}
+                            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                            <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sitemenu-responsive col collapsible collapsed">
+                    <div class="col collapse-trigger">
+                        <div class="cell">
+                            <ul class="nav ">
+                                <li><a href="#"><span class="icon icon-32 icon-align-justify"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="left collapse-section">
+                            <div class="cell">
+                                <ul class="nav">
+                                {% for page in pages.children %}
+                                {% if page.visible %}
+                                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                                <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                                {% endif %}
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

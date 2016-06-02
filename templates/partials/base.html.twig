@@ -18,10 +18,10 @@
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
 
         {% block stylesheets %}
-            {# Foundation core CSS #}
+            {# Cascade core CSS #}
             {% do assets.add('theme://assets/css/cascade/production/build-full.min.css',101) %}
 
-        {# CSS FOR RELOADED #}
+        {# CSS cascade custom #}
             {% do assets.add('theme://assets/css/site.css',100) %}
             {% do assets.add('theme://assets/css/cascade.css',100) %}
 
@@ -44,10 +44,14 @@
         {# include the header + navigation #}
         {% include 'partials/header.html.twig' %}
         <div class="body">
-            <div class="cell">
+          <div class="col">
+            <div class="cell panel">
+              <div class="cell">
             {% block content %}{% endblock %}
-            </div>
-        </div>
+             </div>
+           </div>
+         </div>
+       </div>
         {# include the footer #}
         {% include 'partials/footer.html.twig' %}
     </body>
