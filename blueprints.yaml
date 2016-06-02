@@ -1,0 +1,28 @@
+name: Cascade
+version: 0.1.0
+testing: true
+description: "Cascade is the default theme included with **TANGO**"
+icon: empire
+author:
+  name: TNWARE
+  email: tw@tnware.net
+  url: http://tnware.net
+homepage: https://github.com/tnware/grav-theme-cascade
+demo: http://demo.tnware.net/themes/grav-theme-cascade
+keywords: cascade, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/tnware/grav-theme-cascade/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
