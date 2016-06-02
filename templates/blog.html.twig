@@ -1,4 +1,4 @@
-{% extends 'partials/blog.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
 
@@ -8,17 +8,23 @@
 		{% if blog_image %}
 		<div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
 		{% else %}
-		<div class="blog-header">
+		<div class="body">
 		{% endif %}
-			{{ page.content }}
-		</div>
+		<header class="pageheader site-header">
+		<section>
+				<div class="cell">
+				{{ page.content }}
+				</div>
+		</section>
+</header>
+		  </div>
 
 			{% if config.plugins.breadcrumbs.enabled %}
 				{% include 'partials/breadcrumbs.html.twig' %}
 			{% endif %}
 
-		<div class="content-wrapper blog-content-list grid pure-g">
-			<div id="listing" class="block pure-u-2-3">
+		<section class="blogpost">
+			<div id="listing" class="cell">
 				{% for child in collection %}
 			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
 			    {% endfor %}
@@ -27,6 +33,7 @@
                     {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
                 {% endif %}
 			</div>
+			</section>
 
 		</div>
 	{% endblock %}
