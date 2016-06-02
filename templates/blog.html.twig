@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
@@ -37,3 +38,10 @@
 
 		</div>
 	{% endblock %}
+=======
+{% set collection = page.collection() %}`
+
+{% for child in collection %}
+        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
+{% endfor %}
+>>>>>>> refs/remotes/origin/master
