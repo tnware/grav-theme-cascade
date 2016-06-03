@@ -1,4 +1,4 @@
-{% extends 'partials/base.html.twig' %}
+{% extends 'partials/blog.html.twig' %}
 
 {% set collection = page.collection() %}
 
@@ -8,20 +8,9 @@
 		{% if blog_image %}
 		<div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
 		{% else %}
-		<div class="body">
+		<div class="header">
 		{% endif %}
-		<header class="pageheader site-header">
-		<section>
-				<div class="cell">
-				{{ page.content }}
-				</div>
-		</section>
-</header>
 		  </div>
-
-			{% if config.plugins.breadcrumbs.enabled %}
-				{% include 'partials/breadcrumbs.html.twig' %}
-			{% endif %}
 
 		<section class="blogpost">
 			<div id="listing" class="cell">
