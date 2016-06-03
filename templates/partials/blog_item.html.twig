@@ -31,13 +31,13 @@
                                                 </span>
                                                 </div>
                                                 <div class="body">
-                                                    <div class="cell">
+                                                    <div class="cell tags">
                                                     {% if page.taxonomy.tag %}
                                                     <nav class="blocks">
                                                         {% for tag in page.taxonomy.tag %}
                                                         <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }},</a>
                                                         {% endfor %}
-                                                    </span>
+                                                    </nav>
                                                     {% endif %}
                                                     </div>
                                                 </div>
@@ -89,10 +89,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-</div>
 
 <div class="col">
 
@@ -110,4 +106,3 @@
     {% endif %}
 
     </div>
-</div>
