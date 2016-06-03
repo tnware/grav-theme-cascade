@@ -8,11 +8,11 @@
 		{% if blog_image %}
 		<div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
 		{% else %}
-		<div class="header">
+		<div class="header background-blue color-white">
 		{% endif %}
 		  </div>
 
-		<section class="blogpost">
+		<div class="col">
 			<div id="listing" class="cell">
 				{% for child in collection %}
 			        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
@@ -21,8 +21,8 @@
                 {% if config.plugins.pagination.enabled and collection.params.pagination %}
                     {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
                 {% endif %}
+			 </div>
 			</div>
-			</section>
 
 		</div>
 	{% endblock %}

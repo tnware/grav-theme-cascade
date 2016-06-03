@@ -44,30 +44,93 @@
     </head>
     {# include the header + navigation #}
     {% include 'partials/header.html.twig' %}
-<div class="col">
-                    <div class="cell">
-                        <div class="col">
+    <div class="col">
+                    <div class="cell panel">
+                        <div class="body">
                             <div class="cell">
-                                <div class="page-header">
-                                    <h1>Typography <small>documentation</small></h1>
+                                <div class="col">
+                                    <div class="cell">
+                                        <header class="pageheader site-header">
+                                            <section>
+                                                <div class="cell">
+                                                    <h2>Basic blog layout</h2>
+                                                </div>
+                                            </section>
+                                        </header>
+                                        <aside class="sidebar">
+                                            <div class="cell">
+                                                <nav class="menu">
+                                                    <ul class="left links nav">
+                                                        <li class="active"><a href="#">Blog</a></li>
+                                                        <li><a href="#">Resources</a></li>
+                                                        <li><a href="#">About</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </aside>
+                                        <section class="sitecontent site-body">
+                                            <section class="blogpost">
+                                                <div class="cell">
+                                                    <header>
+                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
+                                                    </header>
+                                                    <section>
+                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
+                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
+                                                    </section>
+                                                    <footer>
+                                                        Wednesday 13<sup>th</sup> march, 2013
+                                                    </footer>
+                                                </div>
+                                            </section>
+                                            <section class="blogpost">
+                                                <div class="cell">
+                                                    <header>
+                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
+                                                    </header>
+                                                    <section>
+                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
+                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
+                                                    </section>
+                                                    <footer>
+                                                        Wednesday 13<sup>th</sup> march, 2013
+                                                    </footer>
+                                                </div>
+                                            </section>
+                                            <section class="blogpost">
+                                                <div class="cell">
+                                                    <header>
+                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
+                                                    </header>
+                                                    <section>
+                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
+                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
+                                                    </section>
+                                                    <footer>
+                                                        Wednesday 13<sup>th</sup> march, 2013
+                                                    </footer>
+                                                </div>
+                                            </section>
+                                        </section>
+                                        <footer class="pagefooter site-footer">
+                                            <section>
+                                                <div class="cell">
+                                                    <nav class="pipes">
+                                                        <ul class="nav">
+                                                            <li><a href="#">Sitemap</a></li>
+                                                            <li><a href="#">About</a></li>
+                                                            <li><a href="#">Contact us</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </section>
+                                        </footer>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        </div>
-                        <div class="col width-fill">
-                        <div class="body">
-                          <div class="col">
-                              <div class="cell">
-                            {% block content %}{% endblock %}
-                             </div>
-                         </div>
-                        </div>
-                        {# include the footer #}
-                        {% include 'partials/footer.html.twig' %}
-                      </div>
                     </div>
-                      </div>
+                </div>
                         </body>
                         {% block bottom %}{% endblock %}
                         </html>
