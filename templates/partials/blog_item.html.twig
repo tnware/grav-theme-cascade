@@ -20,17 +20,23 @@
             {% endif %}
             </div>
             <div class="body">
-                <div class="cell panel">
-                  <div class="col width-fit mobile-width-fit">
-                {% if header_image %}
-                    {% if header_image_file %}
-                        {% set header_image_media = page.media.images[header_image_file] %}
-                    {% else %}
-                        {% set header_image_media = page.media.images|first %}
-                    {% endif %}
-                    {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
-                {% endif %}
-                  </div>
+            <div class="col">
+                    <div class="cell panel">
+                        <div class="body">
+                            <div class="cell">
+                                <figure class="Blog Image">
+                                {% if header_image %}
+                                    {% if header_image_file %}
+                                        {% set header_image_media = page.media.images[header_image_file] %}
+                                    {% else %}
+                                        {% set header_image_media = page.media.images|first %}
+                                    {% endif %}
+                                    {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+                                {% endif %}
+                                    <figcaption>Blog Image</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="body">
