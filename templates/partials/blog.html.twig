@@ -1,10 +1,40 @@
 {% include 'partials/core/doctype.html.twig' %}
 
 {% include 'partials/core/header.html.twig' %}
-
-        <div class="body">
+<div class="col">
+    <div class="cell">
+        <div class="col">
             <div class="cell">
-              {% block content %}{% endblock %}
+                <div class="page-header">
+                                    <h1>{{ header.title }}<small>&nbsp;&nbsp;put breadcrumbs here</small></h1>
+                </div>
             </div>
         </div>
+        <div class="col width-1of6">
+            <div class="cell menu">
+                <span class="tiny">Sub-Menu</span>
+                <ul class="left nav links">
+                  {% for page in pages.children %}
+                  {% if page.visible %}
+                  {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                  <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col width-fill">
+            <div class="col">
+<i>put breadcrumbs or pagination here</i>
+            </div>
+            <div class="col">
+                    <div class="body">
+                            <div class="col">
+              {% block content %}{% endblock %}
+                            </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
 {% include 'partials/core/footer.html.twig' %}
