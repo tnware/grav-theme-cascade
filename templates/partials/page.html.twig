@@ -30,8 +30,8 @@
 
         {% block javascripts %}
             {% do assets.add('theme://assets/js/module/jquery/jquery-2.1.1.min.js', 101) %}
-            {% do assets.add('theme://assets/js/site/base.js') %}
             {% do assets.add('theme://assets/js/app.js') %}
+            {% do assets.add('theme://assets/js/site/base.js') %}
 
             {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
                 {% do assets.add('theme://assets/js/shim/iehtmlshiv.js') %}
@@ -41,96 +41,80 @@
         {% endblock %}
 
         {% endblock head %}
-    </head>
-    {# include the header + navigation #}
-    {% include 'partials/header.html.twig' %}
-    <div class="col">
-                    <div class="cell panel">
-                        <div class="body">
-                            <div class="cell">
-                                <div class="col">
-                                    <div class="cell">
-                                        <header class="pageheader site-header">
-                                            <section>
-                                                <div class="cell">
-                                                    <h2>Basic blog layout</h2>
-                                                </div>
-                                            </section>
-                                        </header>
-                                        <aside class="sidebar">
-                                            <div class="cell">
-                                                <nav class="menu">
-                                                    <ul class="left links nav">
-                                                        <li class="active"><a href="#">Blog</a></li>
-                                                        <li><a href="#">Resources</a></li>
-                                                        <li><a href="#">About</a></li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        </aside>
-                                        <section class="sitecontent site-body">
-                                            <section class="blogpost">
-                                                <div class="cell">
-                                                    <header>
-                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                    </header>
-                                                    <section>
-                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                    </section>
-                                                    <footer>
-                                                        Wednesday 13<sup>th</sup> march, 2013
-                                                    </footer>
-                                                </div>
-                                            </section>
-                                            <section class="blogpost">
-                                                <div class="cell">
-                                                    <header>
-                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                    </header>
-                                                    <section>
-                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                    </section>
-                                                    <footer>
-                                                        Wednesday 13<sup>th</sup> march, 2013
-                                                    </footer>
-                                                </div>
-                                            </section>
-                                            <section class="blogpost">
-                                                <div class="cell">
-                                                    <header>
-                                                        <h3>Cascade Framework makes webdesign easier than ever!</h3>
-                                                    </header>
-                                                    <section>
-                                                        Cascade Framework is a new CSS Framework that offers you everything you need to build
-                                                        professional cross-browser websites in no time. It's modular architecture further ... <a href="#">[ read more ]</a>
-                                                    </section>
-                                                    <footer>
-                                                        Wednesday 13<sup>th</sup> march, 2013
-                                                    </footer>
-                                                </div>
-                                            </section>
-                                        </section>
-                                        <footer class="pagefooter site-footer">
-                                            <section>
-                                                <div class="cell">
-                                                    <nav class="pipes">
-                                                        <ul class="nav">
-                                                            <li><a href="#">Sitemap</a></li>
-                                                            <li><a href="#">About</a></li>
-                                                            <li><a href="#">Contact us</a></li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </section>
-                                        </footer>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </body>
-                        {% block bottom %}{% endblock %}
-                        </html>
+      </head>
+      <body class="narrow">
+       <div class="site-center">
+        <div class="col">
+           <div class="cell panel">
+               <div class="body">
+                   <div class="cell layout-demo">
+                       <header>
+                           <div class="cell">
+                               header
+                               <nav>
+                                   <div class="cell">
+                                       <ul class="nav"><li>nav</li></ul>
+                                   </div>
+                               </nav>
+                           </div>
+                       </header>
+                       <section>
+                           <div class="cell">
+                               section
+                               <section>
+                                   <aside class="width-1of4">
+                                       <div class="cell">
+                                           aside
+                                           <nav>
+                                               <div class="cell">
+                                                   <ul class="nav"><li>nav</li></ul>
+                                               </div>
+                                           </nav>
+                                           <nav>
+                                               <div class="cell">
+                                                   <ul class="nav"><li>nav</li></ul>
+                                               </div>
+                                           </nav>
+                                       </div>
+                                   </aside>
+                                   <section class="width-fill">
+                                       <div class="cell">
+                                           section
+                                           <section>
+                                               <div class="cell">
+                                                   section
+                                               </div>
+                                           </section>
+                                           <section>
+                                               <div class="cell">
+                                                   section
+                                               </div>
+                                           </section>
+                                           <section>
+                                               <div class="cell">
+                                                   section
+                                               </div>
+                                           </section>
+                                       </div>
+                                   </section>
+                               </section>
+                           </div>
+                       </section>
+                       <footer>
+                           <div class="cell">
+                               footer
+                               <nav>
+                                   <div class="cell">
+                                       <ul class="nav"><li>nav</li></ul>
+                                   </div>
+                               </nav>
+                           </div>
+                       </footer>
+                   </div>
+               </div>
+           </div>
+       </div>
+      </div>
+    </body>
+    {% block bottom %}{% endblock %}
+</html>
