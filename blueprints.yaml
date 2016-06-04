@@ -1,14 +1,14 @@
 name: Cascade
 version: 0.1.0
 testing: true
-description: "Cascade is the default theme included with **TANGO**"
+description: "Cascade is a responsive theme based on the Cascade CSS Framework."
 icon: empire
 author:
   name: TNWARE
   email: tw@tnware.net
   url: http://tnware.net
 homepage: https://github.com/tnware/grav-theme-cascade
-demo: http://demo.tnware.net/themes/grav-theme-cascade
+demo: http://demo.tnware.net/grav-theme-cascade
 keywords: cascade, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/tnware/grav-theme-cascade/issues
 license: MIT
