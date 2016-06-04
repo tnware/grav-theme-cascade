@@ -11,9 +11,19 @@
                                 </div>
                             </div>
                         </div><!--- end page header ---->
-                        <!--- begin writing content to display ---->
-{% block content %}{% endblock %}
-                        <!--- end rendering content to display ---->
+                        <div class="col">
+                            <div class="cell panel">
+                                <div class="body">
+                                    <div class="cell">
+                                        <div class="col">
+                                            <div class="cell">
+                          {% block content %}{% endblock %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div><!--- ending from header (put in nav?)---->
                 </div><!--- ending from  header (put in nav?)---->
             <!--- footer ---->
