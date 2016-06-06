@@ -7,7 +7,10 @@
                         <div class="col">
                             <div class="cell">
                                 <div class="page-header">
-                                    <h1>{{ header.title }}<small>&nbsp;&nbsp;put breadcrumbs here</small></h1>
+                                    <h1>{{ header.title }}</h1><br>
+                                    {% if config.plugins.breadcrumbs.enabled %}
+                                    {% include 'partials/breadcrumbs.html.twig' %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
