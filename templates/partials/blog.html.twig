@@ -28,6 +28,47 @@
                   {% endif %}
                   {% endfor %}
                 </ul><br>
+                <div class="col">
+                            <div class="cell panel">
+                                <div class="header">
+                                    Login
+                                </div>
+                                <div class="body">
+                                    <div class="cell">
+                                        <div class="col">
+                                            <div class="cell">
+                                                <form>
+                                                    <div class="col">
+                                                        <div class="col width-1of2">
+                                                            <div class="cell">
+                                                                <label for="login">Login:</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col width-fill">
+                                                            <div class="cell">
+                                                                <input type="text" id="login" class="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="col width-1of2">
+                                                            <div class="cell">
+                                                                <label for="password">Password:</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col width-fill">
+                                                            <div class="cell">
+                                                                <input type="password" id="password" class="text password">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
                 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
                 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
