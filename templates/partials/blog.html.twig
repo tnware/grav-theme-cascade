@@ -6,14 +6,7 @@
         <div class="col">
             <div class="cell">
                 <div class="page-header">
-                                    <h1>{{ header.title }}</h1><br>
-                                    <div class="pipes">
-                                      <ul class="nav">
-                                    {% if config.plugins.breadcrumbs.enabled %}
-                                    {% include 'partials/breadcrumbs.html.twig' %}
-                                    {% endif %}
-                                      </ul>
-                                  </div>
+                          {% include 'partials/core/page_header.html.twig' %}
                 </div>
             </div>
         </div>
