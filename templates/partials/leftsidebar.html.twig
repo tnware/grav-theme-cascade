@@ -3,13 +3,9 @@
 {% include 'partials/core/header.html.twig' %}
 <div class="col">
     <div class="cell">
-        <div class="col">
-            <div class="cell">
-                <div class="page-header">
-                                    <h1>{{ header.title }}<small>&nbsp;&nbsp;put breadcrumbs here</small></h1>
-                </div>
-            </div>
-        </div>
+      <div class="col">
+        {% include 'partials/core/page_header.html.twig' %}
+      </div>
         <div class="col width-1of5">
             <div class="cell menu">
                 <span class="tiny">Sub-Menu</span>
