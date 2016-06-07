@@ -1,0 +1,22 @@
+{% embed 'partials/blog.html.twig' %}
+
+	{% block content %}
+  {% if blog_image %}
+  <div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
+  {% else %}
+  <div class="header background-blue color-white">
+  {% endif %}
+  </div>
+
+<div class="section">
+  <div class="cell">
+	<div class="col width-fill">
+		{% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
+	</div>
+</div>
+</div>
+
+</div>
+	{% endblock %}
+
+{% endembed %}

@@ -1,0 +1,26 @@
+{% include 'partials/core/doctype.html.twig' %}
+
+{% include 'partials/core/header.html.twig' %}
+
+                <div class="col">
+                    <div class="cell">
+                        <div class="col">
+                          {% include 'partials/core/page_header.html.twig' %}
+                        </div>
+                        <div class="col">
+                            <div class="cell panel">
+                                <div class="body">
+                                    <div class="cell">
+                                        <div class="col">
+                                            <div class="cell">
+                          {% block content %}{% endblock %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% include 'partials/core/footer.html.twig' %}

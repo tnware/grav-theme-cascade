@@ -4,12 +4,11 @@
     {% set header_image_file = page.header.header_image_file %}
 
 <div class="col">
-    <div class="cell panel">
         <div class="body">
             <div class="cell">
                 <div class="col">
                     <div class="cell panel">
-                                    <div class="header width-fill">
+                                    <div class="width-fill narrow site-body">
                                     <figure>
                                     {% if header_image %}
                                         {% if header_image_file %}
@@ -22,7 +21,7 @@
                                     </figure>
                                     </div>
                                     <div class="body">
-                                        <div class="col width-1of6">
+                                        <div class="col width-1of5">
                                             <div class="cell panel">
                                                 <div class="header">
                                                 <span class="list-blog-date">
@@ -31,13 +30,13 @@
                                                 </span>
                                                 </div>
                                                 <div class="body">
-                                                    <div class="cell">
+                                                    <div class="cell tags">
                                                     {% if page.taxonomy.tag %}
                                                     <nav class="blocks">
                                                         {% for tag in page.taxonomy.tag %}
                                                         <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }},</a>
                                                         {% endfor %}
-                                                    </span>
+                                                    </nav>
                                                     {% endif %}
                                                     </div>
                                                 </div>
@@ -87,12 +86,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+                    </div>
 
 <div class="col">
 
@@ -110,4 +104,3 @@
     {% endif %}
 
     </div>
-</div>

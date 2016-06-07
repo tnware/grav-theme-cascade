@@ -41,27 +41,23 @@
         {% endblock %}
 
         {% endblock head %}
-    </head>
-        {# include the header + navigation #}
-        {% include 'partials/header.html.twig' %}
+      </head>
+          {# include the header + navigation #}
+          {% include 'partials/header.html.twig' %}
 
-        <div class="col">
-            <div class="cell panel">
-              <div class="header">
-                  Header
+          <div class="col">
+              <div class="cell panel">
+                <div class="cell">
+              		<section>
+              				<div class="cell">
+              				{{ page.content }}
+              				</div>
+              		</section>
+                </div>
+              </div>
             </div>
-          <div class="body">
-          <div class="cell">
-          {% block content %}{% endblock %}
-          </div>
-          </div>
-      <div class="body">
-        {# include the footer #}
-        {% include 'partials/footer.html.twig' %}
-      </div>
-      </div>
-    </div>
-  </div>
-    </body>
-    {% block bottom %}{% endblock %}
-</html>
+          {# include the footer #}
+          {% include 'partials/footer.html.twig' %}
+      </body>
+      {% block bottom %}{% endblock %}
+  </html>
