@@ -1,7 +1,7 @@
 name: Cascade
 version: 0.1.0
 testing: true
-description: "Cascade is the default theme included with **TANGO**"
+description: "Cascade is a responsive HTML5/CSS3 theme that scales well for mobile."
 icon: empire
 author:
   name: TNWARE
