@@ -1,14 +1,13 @@
 name: Cascade
-version: 0.1.0
+version: 0.1.1
 testing: true
 description: "Cascade is a responsive HTML5/CSS3 theme that scales well for mobile."
 icon: empire
 author:
-  name: TNWARE
-  email: tw@tnware.net
+  name: Tyler Woods
+  email: tyler.woods66@gmail.com
   url: http://tnware.net
 homepage: https://github.com/tnware/grav-theme-cascade
-demo: http://demo.tnware.net/themes/grav-theme-cascade
 keywords: cascade, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/tnware/grav-theme-cascade/issues
 license: MIT

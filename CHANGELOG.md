@@ -1,3 +1,18 @@
+# v0.1.1
+## 06/8/2016
+
+1. [](#new)
+    * Blog support
+     - Support "Breacdrumbs" plugin.
+     - Support "Pagination" plugin.
+    * 
+    *
+2. [](#improved)
+    * Re-designed footer container.
+    * removed GitHub link/logo from NavBar. (:
+3. [](#bugfix)
+    * route the null-links in the footer. xD
+
 # v0.1.0
 ## 06/7/2016
 
