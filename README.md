@@ -14,7 +14,7 @@ This Grav theme is an implementation of Cascade Framework's CSS stylesheet.
 
 # Screenshots
 
-Coming Soon...
+![Cascade](/img/features.jpg)
 
 ## Manual Installation
 

@@ -10,6 +10,7 @@
 2. [](#improved)
     * Re-designed footer container.
     * removed GitHub link/logo from NavBar. (:
+    * polished up loose ends
 3. [](#bugfix)
     * route the null-links in the footer. xD
 
