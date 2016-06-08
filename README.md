@@ -9,8 +9,12 @@ This Grav theme is an implementation of Cascade Framework's CSS stylesheet.
 * Fully Responsive
 * Built on HTML5/CSS3
 * Full Support for Icons by Font Awesome!!! _example coming soon_
-* Simple Blog support (In upcoming release, current master)
+* Stylish and simple Blog layout
 * Layout: Centered (fixed) and scales all the way down to mobile with a side menu.
+
+# Screenshots
+
+Coming Soon...
 
 ## Manual Installation
 
