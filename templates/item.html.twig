@@ -1,20 +1,18 @@
-{% embed 'partials/blog.html.twig' %}
+{% embed 'partials/base.html.twig' %}
 
 	{% block content %}
-  {% if blog_image %}
-  <div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
-  {% else %}
-  <div class="header background-blue color-white">
-  {% endif %}
-  </div>
+		{% if config.plugins.breadcrumbs.enabled %}
+			{% include 'partials/breadcrumbs.html.twig' %}
+		{% endif %}
 
-<div class="section">
-  <div class="cell">
-	<div class="col width-fill">
-		{% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
-	</div>
-</div>
-</div>
+		<div class="blog-content-item grid pure-g-r">
+			<div id="item" class="block pure-u-2-3">
+			    {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false} %}
+			</div>
+			<div id="sidebar" class="block size-1-3 pure-u-1-3">
+				{% include 'partials/sidebar.html.twig' with {'blog':page.parent}%}
+			</div>
+		</div>
 	{% endblock %}
 
 {% endembed %}
