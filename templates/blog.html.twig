@@ -5,16 +5,20 @@
 		{% block content %}
 			{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
 
-			{% if blog_image %}
-			<div class="flush-top blog-header blog-header-image" style="background-image: url({{ blog_image.url }});">
-			{% else %}
-			<div class="header color-blue">
-			{% endif %}
-				{{ page.content }}
-			</div>
+		<div class="header background-blue">
+			  	<div class="col">
+          	<div class="cell color-white">
+
+								{{ page.content }}
+
+				  	</div>
+			   </div>
+		</div>
 
 				{% if config.plugins.breadcrumbs.enabled %}
+				<div class="row">
 					{% include 'partials/breadcrumbs.html.twig' %}
+				</div>
 				{% endif %}
 
 			<div class="content-wrapper blog-content-list grid pure-g">
