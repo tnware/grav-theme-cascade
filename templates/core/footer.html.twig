@@ -1,17 +1,46 @@
 <div class="site-footer background-black">
     <div class="cell">
-      <div class="row">
-        <ul class="nav pipes">
-        {% for page in pages.children %}
-        {% if page.visible %}
-        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a> |</li>
-        {% endif %}
-        {% endfor %}
-        </ul>
-      </div>
-        <p class="note">Cascade Theme for <a href="#">Grav</a> by <a href="#">Tyler Woods</a> based on the <a href="#">Cascade CSS Framework</a></p><br>
-        <a href="https://github.com/tnware/grav-theme-cascade"><span class="icon icon-32 icon-github"></span></a>
+      <div class="col">
+            <div class="col width-5of5">
+              <div class="col width-1of5">
+                  <div class="col">
+                      <div class="body">
+                          <div class="col">
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col width-3of5">
+                    <div class="body">
+                        <div class="cell">
+                          <div class="col width-fit">
+                            <ul class="nav pipes">
+                            {% for page in pages.children %}
+                            {% if page.visible %}
+                            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                            <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a><span class="icon icon-16  icon-ellipsis-vertical"></span></li>
+                            {% endif %}
+                            {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                      <br><a href="https://github.com/tnware/grav-theme-cascade"><span class="icon icon-32 icon-github"></span></a>Cascade Theme for <a href="#">Grav</a> by <a href="#">Tyler Woods</a> based on the <a href="#">Cascade CSS Framework</a>
+                      </div>
+                </div>
+                <div class="col width-fill">
+                    <div class="col">
+                        <div class="body">
+                            <div class="col">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!--Closing two <div> tags below were originally opened in the header core element.-->
