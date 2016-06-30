@@ -1,0 +1,51 @@
+<div class="site-footer background-black">
+    <div class="cell">
+      <div class="col">
+            <div class="col width-5of5">
+              <div class="col width-1of5">
+                  <div class="col">
+                      <div class="body">
+                          <div class="col">
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col width-3of5">
+                    <div class="body">
+                        <div class="cell">
+                          <div class="col width-fit">
+                            <ul class="nav pipes">
+                            {% for page in pages.children %}
+                            {% if page.visible %}
+                            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                            <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a><span class="icon icon-16  icon-ellipsis-vertical"></span></li>
+                            {% endif %}
+                            {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                      <br><a href="https://github.com/tnware/grav-theme-cascade"><span class="icon icon-32 icon-github"></span></a>Cascade Theme for <a href="http://getgrav.org">Grav</a> by <a href="http://tnware.net">Tyler Woods</a> based on the <a href="http://cascade-framework.com">Cascade CSS Framework</a>
+                      </div>
+                </div>
+                <div class="col width-fill">
+                    <div class="col">
+                        <div class="body">
+                            <div class="col">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Closing two <div> tags below were originally opened in the header core element.-->
+        </div>
+</div>
+   {% block bottom %}{% endblock %}
+</body> <!--Closing <body> tag resides in the footer core element because the footer is still within the body of the HTML code.-->
+</html>
