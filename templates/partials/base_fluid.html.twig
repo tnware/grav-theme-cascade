@@ -1,14 +1,342 @@
-{% include 'core/doctype.html.twig' %}
+{% include 'core/fluid/doctype.html.twig' %}
 {% include 'core/fluid/header.html.twig' %}
 
-<div class="body">
-  <div class="cell">
-      <div class="col">
-            <div class="cell">
-{% block content %} {{ page.content }} {% endblock %}
+<div class="masthead">
+    <div class="site-center">
+        <div class="cell">
+            <div class="col width-fit">
+                <div class="cell">
+                    <div class="logo-masthead"></div>
+                </div>
             </div>
-      </div>
-  </div>
+            <div class="col width-fill">
+                <div class="cell">
+                    <div class="center slogan">
+                        <div class="cell">
+                            Cascade Framework
+                            <div class="sub">Putting back the C in CSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-center">
+    <div class="cell">
+        <ul class="nav">
+            <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jslegers&repo=cascadeframework&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="105" height="20"></iframe>
+            </li>
+            <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jslegers&amp;repo=cascadeframework&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
+            </li>
+            <li class="tweet-btn phone-hidden">
+                <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.1375828408.html#_=1376404443762&count=horizontal&hashtags=css&id=twitter-widget-0&lang=en&original_referer=file%3A%2F%2F%2FE%3A%2Fjohnslegers.com%2FcascadePHP%2Fcascade-final%2Findex.html&size=m&text=Cascade%20Framework%20-%20Putting%20back%20the%20C%20in%20CSS&url=http%3A%2F%2Fcascade-framework.com%2F&via=cascadecss" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 102px; height: 20px;"></iframe>
+            </li>
+            <li class="follow-btn">
+                <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/follow_button.1375828408.html#_=1376403988074&id=twitter-widget-0&lang=en&screen_name=cascadecss&show_count=true&show_screen_name=true&size=m" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 235px; height: 20px;"></iframe>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="site-body">
+    <div class="site-center highlights">
+        <div class="col width-1of4">
+            <div class="cell">
+                <h2><span class="center icon icon-check icon-64"></span>Feature Rich</h2>
+                <p>
+                    Semantic and non-semantic grid layouts, base templates, table designs, navigation elements, typography and lots, lots more.
+                </p>
+            </div>
+        </div>
+        <div class="col width-1of4">
+            <div class="cell">
+                <h2><span class="center icon icon-globe icon-64"></span>Universal</h2>
+                <p>
+                    Build high performance websites in no time for old browers and new browsers alike without worrying about browser quirks.
+                </p>
+            </div>
+        </div>
+        <div class="col width-1of4">
+            <div class="cell">
+                <h2><span class="center icon icon-beaker icon-64"></span>Atomic</h2>
+                <p>
+                    An optimised atomic design gives you full control of the look and feel of your site while keeping code bloat minimal.
+                </p>
+            </div>
+        </div>
+        <div class="col width-fill">
+            <div class="cell">
+                <h2><span class="center icon icon-cogs icon-64"></span>Modular</h2>
+                <p>
+                    Don't need certain features? Don't include them. Unlike other frameworks, you can include only the components you need.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-body">
+    <div class="site-center">
+        <div class="col">
+            <div class="cell">
+
+{% block content %} {{ page.content }} {% endblock %}
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="cell">
+                <h2>Showcase</h2>
+                <p>Want to see real world projects that use Cascade Framework? Check out the showcase below.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cell panel">
+                <div class="body">
+                    <div class="cell">
+                        <div class="col">
+                            <div class="gallery cell">
+                                <ul class="nav">
+                                    <li><a href="http://pensiontheker.werksite.be/" target="_blank"><img src="assets/img/showcase/pensiontheker.png"></a></li>
+                                    <li><a href="http://dyvy.com/" target="_blank"><img src="assets/img/showcase/dyvy.png"></a></li>
+                                    <li><a href="http://legalhill.com/" target="_blank"><img src="assets/img/showcase/legalhill.png"></a></li>
+                                    <li><a href="http://www.mijnhart-acs.be/" target="_blank"><img src="assets/img/showcase/mijnhart.png"></a></li>
+                                    <li><a href="http://streetwize.werksite.be/" target="_blank"><img src="assets/img/showcase/streetwize.png"></a></li>
+                                    <li><a href="http://forum-actif-support.herokuapp.com/" target="_blank"><img src="assets/img/showcase/heroku.png"></a></li>
+                                    <li><a href="http://www.projekty-stajni.pl/" target="_blank"><img src="assets/img/showcase/projekty-stajni.png"></a></li>
+                                    <li><a href="http://www.entfly.com/" target="_blank"><img src="assets/img/showcase/entfly.png"></a></li>
+                                    <li><a href="http://www.hdbjs.com.cn/Home" target="_blank"><img src="assets/img/showcase/schools-beijing.png"></a></li>
+                                    <li><a href="http://zcgl.agri.gov.cn/" target="_blank"><img src="assets/img/showcase/agri-gov.png"></a></li>
+                                    <li><a href="http://www.casacorazon.us/" target="_blank"><img src="assets/img/showcase/casacorazon.png"></a></li>
+                                    <li><a href="http://www.hiroshima.med.or.jp/kodomo/" target="_blank"><img src="assets/img/showcase/kodomo.png"></a></li>
+                                    <li><a href="http://www.xcessbuy.com/" target="_blank"><img src="assets/img/showcase/xcessbuy.png"></a></li>
+                                    <li><a href="http://www.johnslegers.com/lead-dashboard/keyword:cascade%20framework,%20google%20adwords,%20application/currency:US%20Dollars" target="_blank"><img src="assets/img/showcase/db.png"></a></li>
+                                    <li><a href="http://www.johnslegers.com/map/" target="_blank"><img src="assets/img/showcase/map.png"></a></li>
+                                    <li><a href="http://erik.responsive.sk/" target="_blank"><img src="assets/img/showcase/paldan.png"></a></li>
+                                    <li><a href="http://www.cossim.com/" target="_blank"><img src="assets/img/showcase/cossim.png"></a></li>
+                                    <li><a href="http://www.johnslegers.com/gravatar/" target="_blank"><img src="assets/img/showcase/gravatar.png"></a></li>
+                                    <li><a href="http://www.ciooffice.se/ea/ea-navigation/ea-navigation.htm" target="_blank"><img src="assets/img/showcase/ciooffice.png"></a></li>
+                                    <li><a href="http://towan.sakura.ne.jp/towan_kanko/index.php" target="_blank"><img src="assets/img/showcase/towan.png"></a></li>
+                                    <li><a href="http://grandale.org/" target="_blank"><img src="assets/img/showcase/grandale.png"></a></li>
+                                    <li><a href="http://www.seasure.co.uk/" target="_blank"><img src="assets/img/showcase/seasure.png"></a></li>
+                                    <li><a href="http://www.marcushurley.com/" target="_blank"><img src="assets/img/showcase/huxley.png"></a></li>
+                                    <!--
+                                    <li><a href="http://coshg.org/" target="_blank"><img src="assets/img/showcase/coshg.png"></a></li>
+                                    <li><a href="http://www.johnslegers.com/" target="_blank"><img src="assets/img/showcase/johnslegers.png"></a></li>
+                                    <li><a href="http://www.kawasaki-motors.com/info/u29/" target="_blank"><img src="assets/img/showcase/kawasaki.png"></a></li>
+                                    <li><a href="http://www.ydesp.jp/" target="_blank"><img src="assets/img/showcase/ydesp.png"></a></li>
+                                    <li><a href="http://www.nicomimi.net/" target="_blank"><img src="assets/img/showcase/nicomimi.png"></a></li>
+                                    <li><a href="http://q.hdbjs.com.cn/Hd" target="_blank"><img src="assets/img/showcase/CPPCC.png"></a></li>
+                                    <li><a href="http://www.dev48.com/" target="_blank"><img src="assets/img/showcase/dev48.png"></a></li>
+                                    <li><a href="http://maddrob.co.za/" target="_blank"><img src="assets/img/showcase/maddrob.png"></a></li>
+                                    <li><a href="http://mbrowne.github.io/ClassRegistration-DCI/" target="_blank"><img src="assets/img/showcase/summersatlrei.png"></a></li>
+                                    <li><a href="http://ibaino.net/" target="_blank"><img src="assets/img/showcase/ibaino.png"></a></li>
+                                    <li><a href="http://www.tiagomarques.com.br/" target="_blank"><img src="assets/img/showcase/tiagomarques.png"></a></li>
+                                    <li><a href="http://www.perezbarreiro.com/" target="_blank"><img src="assets/img/showcase/barreiro.png"></a></li>
+                                    <li><a href="http://baojia.xianlan114.com/" target="_blank"><img src="assets/img/showcase/xianlan114.png"></a></li>
+                                    -->
+                                    <li><a href="http://www.johnslegers.com/contact" target="_blank"><img src="assets/img/showcase/clickme.png"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Cascade Modules</h2>
+                    <p>The following table gives an overview of the available Cascade modules.</p>
+
+                    <table class="outline-header border box-header outline files" summary="Employee Pay Sheet">
+                        <thead>
+                            <tr>
+                                <th class="name">File</th>
+                                <th class="content mobile-hidden">Content</th>
+                                <th class="minified">Minified</th>
+                                <th class="gzipped">Gzipped</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>core.css</td>
+                                <td class="mobile-hidden">Cross-browser rules for building your page structure.</td>
+                                <td>8705 B</td>
+                                <td>2677 B</td>
+                            </tr>
+                            <tr>
+                                <td>typography.css</td>
+                                <td class="mobile-hidden">Font sizes, line heights and other typographical rules</td>
+                                <td>3057 B</td>
+                                <td>1149 B</td>
+                            </tr>
+                            <tr>
+                                <td>tables.css</td>
+                                <td class="mobile-hidden">Classes that can be combined to layout your HTML tables</td>
+                                <td>1107 B</td>
+                                <td>370 B</td>
+                            </tr>
+                            <tr>
+                                <td>colors.css</td>
+                                <td class="mobile-hidden">Text colors, backgrounds and border colors</td>
+                                <td>5164 B</td>
+                                <td>1610 B</td>
+                            </tr>
+                            <tr>
+                                <td>modern.css</td>
+                                <td class="mobile-hidden">Rounded corners, box-shadow and other CSS3 styles</td>
+                                <td>2935 B</td>
+                                <td>702 B</td>
+                            </tr>
+                            <tr>
+                                <td>helpers.css</td>
+                                <td class="mobile-hidden">Generic helper classes</td>
+                                <td>1367 B</td>
+                                <td>414 B</td>
+                            </tr>
+                            <tr>
+                                <td>grids.css</td>
+                                <td class="mobile-hidden">Presentational grid classes</td>
+                                <td>1971 B</td>
+                                <td>473 B</td>
+                            </tr>
+                            <tr>
+                                <td>responsive.css</td>
+                                <td class="mobile-hidden">Responsive support</td>
+                                <td>2882 B</td>
+                                <td>631 B</td>
+                            </tr>
+                            <tr>
+                                <td>mobile-grids.css</td>
+                                <td class="mobile-hidden">Mobile specific grid classes</td>
+                                <td>2970 B</td>
+                                <td>555 B</td>
+                            </tr>
+                            <tr>
+                                <td>tablet-grids.css</td>
+                                <td class="mobile-hidden">Tablet specific grid classes</td>
+                                <td>2992 B</td>
+                                <td>569 B</td>
+                            </tr>
+                            <tr>
+                                <td>phone-grids.css</td>
+                                <td class="mobile-hidden">Phone specific grid classes</td>
+                                <td>2877 B</td>
+                                <td>550 B</td>
+                            </tr>
+                            <tr>
+                                <td>icons.css</td>
+                                <td class="mobile-hidden">Icons</td>
+                                <td>14362 B</td>
+                                <td>2792 B</td>
+                            </tr>
+                            <tr>
+                                <td>icons-ie7.css</td>
+                                <td class="mobile-hidden">Icon support for IE<8</td>
+                                <td>34991 B</td>
+                                <td>2994 B</td>
+                            </tr>
+                            <tr>
+                                <td>print.css</td>
+                                <td class="mobile-hidden">Print styles</td>
+                                <td>573 B</td>
+                                <td>340 B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Builds</h2>
+                    <p>Cascade Framework provides you with 4 custom builds, that combine different modules into a single file.</p>
+
+                    <table class="outline-header border box-header outline files" summary="Employee Pay Sheet">
+                        <thead>
+                            <tr>
+                                <th class="name">File</th>
+                                <th class="content mobile-hidden">Content</th>
+                                <th class="minified">Minified</th>
+                                <th class="gzipped">Gzipped</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>build-core+typography.css</td>
+                                <td class="mobile-hidden">Contains only the core and typography modules.</td>
+                                <td>11732 B</td>
+                                <td>3563 B</td>
+                            </tr>
+                            <tr>
+                                <td>build-core+typography+responsive.css</td>
+                                <td class="mobile-hidden">Adds responsive support.</td>
+                                <td>14614 B</td>
+                                <td>4022 B</td>
+                            </tr>
+                            <tr>
+                                <td>build-full.css</td>
+                                <td class="mobile-hidden">All modules, except for IE<8 icons and print styles.</td>
+                                <td>51072 B</td>
+                                <td>10694 B</td>
+                            </tr>
+                            <tr>
+                                <td>build-full-no-icons.css</td>
+                                <td class="mobile-hidden">Full build without icon classes.</td>
+                                <td>36705 B</td>
+                                <td>7864 B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Still not lightweight enough?</h2>
+                    <p>Is Cascade Framework still not lightweight enough to fit your personal needs?
+                        There's now also an even more lightweight version of Cascade Framework.
+                        Check it out <a href="http://jslegers.github.io/cascadeframeworklight/">on Github</a>!</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>What's next?</h2>
+                    <p>Planned features for Cascade Framework 2 :</p>
+                    <ul>
+                        <li>A rewrite of the codebase to Sass 3.3</li>
+                        <li>Custom themes</li>
+                        <li>New interactive UI elements</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Contribute</h2>
+                    <p>Want to help? Fork <a href="https://github.com/jslegers/cascadeframework">the project at Github</a>.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Donations</h2>
+                    <p>You can also help by making a donation with PayPal.</p>
+                    <!--         <div class="col width-1of2"><iframe scrolling="no" frameborder="0" allowTransparency="true" src='https://api.bountysource.com/user/fundraisers/421/embed' style='width: 238px; height: 402px; overflow: hidden; border: 0px;'></iframe></div>
+                    <div class="col width-fill"><iframe scrolling="no" frameborder="0" allowTransparency="true" style="border: 0; margin: 0; padding: 0;" src="https://www.gittip.com/johnslegers/widget.html" width="48" height="22"></iframe></div -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="A5PW4E9TTVFFS">
+                        <input type="image" src="https://www.paypalobjects.com/nl_NL/BE/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+                    </form>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="cell">
+                    <h2>Want to know more?</h2>
+                    <p>Check out <a href="grid.html">the documentation</a> for an overview and demos of the Cascade Framework's features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% include 'core/footer.html.twig' %}
