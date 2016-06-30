@@ -9,7 +9,16 @@
                     <div class="center slogan">
                         <div class="cell">
                             {{ site.title }}
-                            <div class="sub">Sub Title</div>
+                            <div class="sub">
+                                <ul class="nav">
+                                    <li>
+                                        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tnware&repo=grav-theme-cascade&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="105" height="20"></iframe>
+                                    </li>
+                                    <li>
+                                        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tnware&repo=grav-theme-cascade&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -22,14 +31,6 @@
       {% if config.plugins.breadcrumbs.enabled %}
 				{% include 'partials/breadcrumbs.html.twig' %}
 			{% endif %}
-            <ul class="nav">
-                <li>
-                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tnware&repo=grav-theme-cascade&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="105" height="20"></iframe>
-                </li>
-                <li>
-                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tnware&repo=grav-theme-cascade&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102" height="20"></iframe>
-                </li>
-            </ul>"
     </div>
 </div>
 
