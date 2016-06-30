@@ -1,4 +1,14 @@
-{% include 'core/fluid/doctype.html.twig' %}
-{% include 'core/fluid/header.html.twig' %}
-{% include 'core/fluid/body.html.twig' %}
-{% include 'core/fluid/footer.html.twig' %}
+{% include 'core/doctype.html.twig' %}
+{% include 'core/header.html.twig' %}
+
+<div class="body">
+  <div class="cell">
+      <div class="col">
+            <div class="cell">
+{% block content %} {{ page.content }} {% endblock %}
+            </div>
+      </div>
+  </div>
+</div>
+
+{% include 'core/footer.html.twig' %}
