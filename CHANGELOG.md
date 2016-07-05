@@ -1,5 +1,17 @@
+# v0.1.3
+## 07/5/2016
+
+1. [](#new)
+    * Blog page fluidity
+
+2. [](#improved)
+    * removed header from blog page
+
+3. [](#bugfix)
+    * 
+
 # v0.1.2
-## 06/8/2016
+## 07/4/2016
 
 1. [](#new)
     * "Default Fixed" style
