@@ -5,16 +5,6 @@
 		{% block content %}
 			{% set blog_image = page.media.images|first.grayscale().contrast(20).brightness(-100).colorize(-35,81,122) %}
 
-		<div class="header background-blue">
-			  	<div class="col">
-          	<div class="cell color-white">
-
-								{{ page.content }}
-
-				  	</div>
-			   </div>
-		</div>
-
 				{% if config.plugins.breadcrumbs.enabled %}
 				<div class="row">
 					{% include 'partials/breadcrumbs.html.twig' %}
