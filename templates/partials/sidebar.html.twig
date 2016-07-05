@@ -1,6 +1,10 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
+<div class="sidebar-content">
+	<h4>Sidebar Text:</h4>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
     <h4>Search:</h4>
@@ -17,10 +21,6 @@
 	<a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> {{ 'SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
 </div>
 {% endif %}
-<div class="sidebar-content">
-	<h4>Sidebar Text:</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-</div>
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
     <h4>Tags:</h4>
