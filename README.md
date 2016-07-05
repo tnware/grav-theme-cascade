@@ -1,6 +1,6 @@
 # Cascade
 
->>> Attention! Cascade for Grav is currently in a pre-release state. Some commits are stable, and some might have slight issues. Thank you for your understanding.
+> Attention! Cascade for Grav is currently in a pre-release state. Some commits are stable, and some might have slight issues. Thank you for your understanding.
 
 ![Cascade](/screenshot.jpg)
 
