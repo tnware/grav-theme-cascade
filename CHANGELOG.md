@@ -4,6 +4,11 @@
 1. [](#new)
     * Blog page fluidity
     * Blog page sidebar
+    * Support for plugins
+     - taxonomylist
+     - archives
+     - simplesearch
+     - feed
 
 2. [](#improved)
     * removed header from blog page
