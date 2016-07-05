@@ -8,7 +8,7 @@
     * removed header from blog page
 
 3. [](#bugfix)
-    * 
+    * remove "dropdown in navbar" toggle from blueprints.
 
 # v0.1.2
 ## 07/4/2016
