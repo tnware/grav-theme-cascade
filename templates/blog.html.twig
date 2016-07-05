@@ -11,13 +11,13 @@
 				</div>
 				{% endif %}
 
-				<div id="sidebar" class="col width-fill">
+				<div id="sidebar" class="col width-1of5">
 														<div class="col">
 					{% include 'partials/sidebar.html.twig' with {'blog':page} %}
 														</div>
 												</div>
 
-			<div class="col width-4of5">
+			<div class="col width-fit">
 				<div id="listing" class="col">
 					{% for child in collection %}
 				        {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
