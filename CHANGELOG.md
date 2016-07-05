@@ -1,5 +1,5 @@
 # v0.1.3
-## 07/5/2016
+## 07/05/2016
 
 1. [](#new)
     * Blog page fluidity
@@ -17,7 +17,7 @@
     * remove "dropdown in navbar" toggle from blueprints.
 
 # v0.1.2
-## 07/4/2016
+## 07/04/2016
 
 1. [](#new)
     * "Default Fixed" style
@@ -31,7 +31,7 @@
 
 
 # v0.1.1
-## 06/8/2016
+## 06/08/2016
 
 1. [](#new)
     * Blog support
@@ -47,7 +47,7 @@
     * route the null-links in the footer. xD
 
 # v0.1.0
-## 06/7/2016
+## 06/07/2016
 
 1. [](#new)
     * File structure
@@ -60,7 +60,7 @@
 
 
 # v0.0.6
-## 06/1/2016
+## 06/01/2016
 
 1. [](#new)
     * stuff to test
