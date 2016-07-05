@@ -11,13 +11,6 @@
 				</div>
 				{% endif %}
 
-				<div id="sidebar" class="col width-1of3">
-				                    <div class="cell menu">
-					{% include 'partials/sidebar.html.twig' with {'blog':page} %}
-				                    </div>
-				                </div>
-
-
 			<div class="col width-fill">
 				<div id="listing" class="col">
 					{% for child in collection %}
@@ -29,6 +22,13 @@
 	                {% endif %}
 				</div>
 			</div>
+
+			<div id="sidebar" class="col width-1of5">
+													<div class="cell menu">
+				{% include 'partials/sidebar.html.twig' with {'blog':page} %}
+													</div>
+											</div>
+
 		{% endblock %}
 
 	{% endembed %}
