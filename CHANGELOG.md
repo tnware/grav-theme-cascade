@@ -3,6 +3,7 @@
 
 1. [](#new)
     * Blog page fluidity
+    * Blog page sidebar
 
 2. [](#improved)
     * removed header from blog page
