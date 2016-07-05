@@ -2,10 +2,24 @@
 ## 06/8/2016
 
 1. [](#new)
+    * "Default Fixed" style
+     - the old 0.1.1 centered style
+     - Support "Pagination" plugin.
+    * "Default Fluid" style
+     - Full-page version of the 0.1.1 style
+
+2. [](#improved)
+    * cleaned off some dust...
+
+
+# v0.1.1
+## 06/8/2016
+
+1. [](#new)
     * Blog support
      - Support "Breacdrumbs" plugin.
      - Support "Pagination" plugin.
-    * 
+    *
     *
 2. [](#improved)
     * Re-designed footer container.
