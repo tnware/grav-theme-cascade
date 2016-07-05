@@ -1,4 +1,24 @@
 {% include 'core/fluid/doctype.html.twig' %}
 {% include 'core/fluid/header.html.twig' %}
-{% include 'core/fluid/body.html.twig' %}
-{% include 'core/fluid/footer.html.twig' %}
+
+<div class="site-center">
+    <div class="cell">
+      {% if config.plugins.breadcrumbs.enabled %}
+				{% include 'partials/breadcrumbs.html.twig' %}
+			{% endif %}
+    </div>
+</div>
+
+<div class="site-body">
+    <div class="site-center">
+        <div class="col">
+            <div class="cell">
+
+{% block content %} {{ page.content }} {% endblock %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'core/footer.html.twig' %}

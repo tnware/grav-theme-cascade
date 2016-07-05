@@ -1,0 +1,55 @@
+<div class="site-header-fixture">
+  <div class="site-header">
+        <div class="tags sitemenutags">
+        </div>
+        <div class="col width-fit sitemenu">
+            <div class="col width-fit mobile-width-fit">
+                <div class="cell">
+                <ul class="nav">
+
+                        <li><h1><span class="icon icon-32 icon-terminal"></span>{{ site.title }}</h1></li>
+                </ul>
+                </div>
+            </div>
+            <div class="col width-fit mobile-width-fit">
+                <div class="cell">
+                <ul class="nav">
+                {% for page in pages.children %}
+                {% if page.visible %}
+                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                {% endif %}
+                {% endfor %}
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sitemenu-responsive col collapsible collapsed">
+            <div class="col collapse-trigger">
+                <div class="cell">
+                    <ul class="nav ">
+                        <li><a href="#"><span class="icon icon-32 icon-align-justify"></span></a></li>
+                        <li>&nbsp;</li>
+                        <li><h1>{{ site.title }}</h1></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="right collapse-section">
+                    <div class="cell">
+                    <ul class="nav">
+                    {% for page in pages.children %}
+                    {% if page.visible %}
+                    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                    <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+<br>
+<br>

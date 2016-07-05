@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if header.description %}
+        <meta name="description" content="{{ header.description }}">
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        {% endif %}
+        {% if header.robots %}
+        <meta name="robots" content="{{ header.robots }}">
+        {% endif %}
+        <link rel="icon" type="image/png" href="{{ theme_url }}/img/favicon.png">
+
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+        {% block stylesheets %}
+            {# Cascade core CSS #}
+            {% do assets.add('theme://css/cascade/production/build-full.min.css',101) %}
+
+        {# CSS cascade custom #}
+            {% do assets.add('theme://css/site.css',100) %}
+            {% do assets.add('theme://css/cascade.css',100) %}
+
+            {{ assets.css() }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.add('theme://js/module/jquery/jquery-2.1.1.min.js', 101) %}
+            {% do assets.add('theme://js/app.js') %}
+            {% do assets.add('theme://js/site/base.js') %}
+
+            {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+                {% do assets.add('theme://js/shim/iehtmlshiv.js') %}
+            {% endif %}
+
+            {{ assets.js() }}
+        {% endblock %}
+        {% endblock head %}
+
+        <style type="text/css">
+            .site-body {
+                color:#5a5a5a;
+                font-size: 15.5px;
+            }
+
+            .logo-masthead {
+                background: #fff url('assets/img/cascade icons/logo-masthead.png');
+                width:256px;
+                height:256px;
+            }
+
+            h2 {
+                color:#5a5a5a;
+                font-weight: 200;
+                margin-bottom: 5px;
+            }
+
+            .highlights {
+                margin: 15px auto;
+                text-align: center;
+            }
+
+            .masthead .slogan {
+                margin-top:75px;
+                font-size: 40px;
+                line-height: 100%;
+                font-weight: 700;
+                width:440px;
+                text-shadow: #2a5267 1px 2px 2px;
+            }
+
+            .masthead .slogan .sub {
+                font-size: 20px;
+                font-weight: normal;
+                text-shadow: #2a5267 0px 1px 1px;
+            }
+
+            .files th, .files td {
+                text-align: right;
+            }
+
+            .files tr :nth-child(2) {
+                text-align: left;
+            }
+
+            .files .name {
+                width:25%;
+            }
+
+            .files .content {
+                width:50%;
+            }
+
+            .files .minified {
+                width:13%;
+            }
+
+            .gallery .nav {
+                width: 100%;
+            }
+
+            .gallery li {
+                width: 25%;
+                *width:24.8%;
+                min-height: 1px;
+            }
+
+            .gallery a {
+                height: 0;
+                padding-bottom: 70.16%;
+                margin: 5px;
+                position: relative;
+                float: none;
+                *padding:0;
+                *height: 149px;
+            }
+
+            .gallery img {
+                float: none;
+                border-width:2px;
+                border-color:#999;
+                position: absolute;
+                left:0;
+                top:0;
+                width:100%;
+                height:100%;
+            }
+
+            .gallery img:hover {
+                border-color:#3981a7;
+            }
+
+            @media (max-width:979px) {
+                .files .name {
+                    width:50%;
+                }
+
+                .files .minified {
+                    width:25%;
+                }
+
+                .masthead .slogan {
+                    margin:0 auto;
+                    text-align: center;
+                }
+
+                .masthead .logo-masthead {
+                    margin:0 auto;
+                }
+
+                .masthead .width-fit {
+                    width:100%;
+                }
+
+                .highlights .col {
+                    width:50%!important;
+                }
+            }
+
+
+            @media (max-width: 600px) {
+                .highlights h2,.highlights p {
+                    text-align: left;
+                }
+
+                .icon {
+                    margin:0 10px !important;
+                    float:none !important;
+                    display:inline-block !important;
+                }
+
+                .highlights .col {
+                    width:100%!important;
+                }
+            }
+
+
+            @media (max-width: 600px) {
+
+            .gallery li {
+                width: 50%;
+            }
+
+            @media (max-width:410px) {
+                .masthead .slogan {
+                    font-size: 30px;
+                    width:100%;
+                }
+
+                td,th {
+                    width:auto !important;
+                    word-break:break-all;
+                }
+
+                .name {
+                    width: 45%!important;
+                }
+
+                .site-body {
+                    font-size: 13px;
+                }
+            }
+
+            @media (max-width:280px) {
+                .masthead .logo-masthead {
+                    width:200px;
+                    height:200px;
+                    background-size: 100%;
+                }
+            }
+
+            @media (max-width:210px) {
+                .masthead .logo-masthead {
+                    width:150px;
+                    height:150px;
+                }
+            }
+        </style>
+
+      </head>
+<body class="narrow"><!--Opening <body> tag resides in the doctype core element so that the header element may reside within the body.-->
