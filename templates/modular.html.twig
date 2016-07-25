@@ -5,23 +5,18 @@
 
 {% block javascripts %}
     {% if show_onpage_menu %}
-        {% do assets.add('theme://js/singlePageNav.min.js') %}
+        {% do
+            assets.add('theme://js/singlePageNav.min.js') %}
     {% endif %}
     {{ parent() }}
 {% endblock %}
-
 
 {% block bottom %}
     {{ parent() }}
     {% if show_onpage_menu %}
         <script>
-        // singlePageNav initialization & configuration
-        $('#navbar').singlePageNav({
-            offset: $('#header').outerHeight(),
-            filter: ':not(.external)',
-            updateHash: true,
-            currentClass: 'active'
-        });
+            // singlePageNav initialization & configuration
+            $('#navbar').singlePageNav({offset: $('#header').outerHeight(), filter: ':not(.external)', updateHash: true, currentClass: 'active'});
         </script>
     {% endif %}
 {% endblock %}
@@ -29,18 +24,24 @@
 {% block header_navigation %}
     {% if show_onpage_menu %}
         <ul class="navigation">
-        {% for module in page.collection() %}
-            {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li class="{{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
-        {% endfor %}
-        {% for mitem in site.menu %}
-            <li>
-                <a href="{{ mitem.url }}">
-                    {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
-                    {{ mitem.text }}
-                </a>
-            </li>
-        {% endfor %}
+            {% for module in page.collection() %}
+                {% set current_module = (module.active or module.activeChild)
+                    ? 'active'
+                    : '' %}
+                <li class="{{ current_module }}">
+                    <a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a>
+                </li>
+            {% endfor %}
+            {% for mitem in site.menu %}
+                <li>
+                    <a href="{{ mitem.url }}">
+                        {% if mitem.icon %}
+                            <i class="fa fa-{{ mitem.icon }}"></i>
+                        {% endif %}
+                        {{ mitem.text }}
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     {% else %}
         {{  parent() }}

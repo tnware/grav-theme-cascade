@@ -1,93 +1,101 @@
-{% set header_image = page.header.header_image|defined(true) %}
-{% set header_image_width  = page.header.header_image_width|defined(900) %}
-{% set header_image_height = page.header.header_image_height|defined(300) %}
+{% set header_image = page.header.header_image | defined(true) %}
+{% set header_image_width = page.header.header_image_width | defined(900) %}
+{% set header_image_height = page.header.header_image_height | defined(300) %}
 {% set header_image_file = page.header.header_image_file %}
 
 <div class="col">
-        <div class="body">
-            <div class="cell">
-                <div class="col">
-                    <div class="cell panel">
-                                    <div class="width-fill narrow site-body">
-                                    <figure>
-                                    {% if header_image %}
-                                        {% if header_image_file %}
-                                            {% set header_image_media = page.media.images[header_image_file] %}
-                                        {% else %}
-                                            {% set header_image_media = page.media.images|first %}
+    <div class="body">
+        <div class="cell">
+            <div class="col">
+                <div class="cell panel">
+                    <div class="width-fill narrow site-body">
+                        <figure>
+                            {% if header_image %}
+                                {% if header_image_file %}
+                                    {% set header_image_media = page.media.images[header_image_file] %}
+                                {% else %}
+                                    {% set header_image_media = page.media.images | first %}
+                                {% endif %}
+                                {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+                            {% endif %}
+                        </figure>
+                    </div>
+                    <div class="body">
+                        <div class="col width-1of5">
+                            <div class="cell panel">
+                                <div class="header">
+                                    <span class="list-blog-date">
+                                        <span>{{ page.date|date("d") }}</span>
+                                        <span>{{ page.date|date("M") }}</span>
+                                        <span>{{ page.date|date("Y") }}</span>
+                                    </span>
+                                </div>
+                                <div class="body">
+                                    <div class="cell tags">
+                                        {% if page.taxonomy.tag %}
+                                            <nav class="blocks">
+                                                {% for tag in page.taxonomy.tag %}
+                                                    <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }},</a>
+                                                {% endfor %}
+                                            </nav>
                                         {% endif %}
-                                        {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
-                                    {% endif %}
-                                    </figure>
                                     </div>
-                                    <div class="body">
-                                        <div class="col width-1of5">
-                                            <div class="cell panel">
-                                                <div class="header">
-                                                <span class="list-blog-date">
-                                                    <span>{{ page.date|date("d") }}</span>
-                                                    <span>{{ page.date|date("M") }}</span>
-                                                    <span>{{ page.date|date("Y") }}</span>
-                                                </span>
-                                                </div>
-                                                <div class="body">
-                                                    <div class="cell tags">
-                                                    {% if page.taxonomy.tag %}
-                                                    <nav class="blocks">
-                                                        {% for tag in page.taxonomy.tag %}
-                                                        <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }},</a>
-                                                        {% endfor %}
-                                                    </nav>
-                                                    {% endif %}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col width-fill">
-                                            <div class="cell panel">
-                                                <div class="header">
-                                                {% if page.header.link %}
-                                                            <h4>
-                                                                {% if page.header.continue_link is not sameas(false) %}
-                                                                <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
-                                                                {% endif %}
-                                                                <a href="{{ page.header.link }}">{{ page.title }}</a>
-                                                            </h4>
-                                                        {% else %}
-                                                            <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
-                                                        {% endif %}
-                                                </div>
-                                                <div class="body">
-                                                    <div class="cell">
-                                                    {% if page.header.continue_link is sameas(false) %}
-                                                        {{ page.content }}
-                                                        {% if not truncate %}
-                                                        {% set show_prev_next = true %}
-                                                        {% endif %}
-                                                    {% elseif truncate and page.summary != page.content %}
-                                                        {{ page.summary }}
-                                                        <p><a href="{{ page.url }}">Continue Reading...</a></p>
-                                                    {% elseif truncate %}
-                                                        {% if page.summary != page.content %}
-                                                            {{ page.content|truncate(550) }}
-                                                        {% else %}
-                                                            {{ page.content }}
-                                                        {% endif %}
-                                                        <p><a href="{{ page.url }}">Continue Reading...</a></p>
-                                                    {% else %}
-                                                        {{ page.content }}
-                                                        {% set show_prev_next = true %}
-                                                    {% endif %}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col width-fill">
+                            <div class="cell panel">
+                                <div class="header">
+                                    {% if page.header.link %}
+                                        <h4>
+                                            {% if page.header.continue_link is not sameas(false) %}
+                                                <a href="{{ page.url }}">
+                                                    <i class="fa fa-angle-double-right"></i>
+                                                </a>
+                                            {% endif %}
+                                            <a href="{{ page.header.link }}">{{ page.title }}</a>
+                                        </h4>
+                                    {% else %}
+                                        <h4>
+                                            <a href="{{ page.url }}">{{ page.title }}</a>
+                                        </h4>
+                                    {% endif %}
+                                </div>
+                                <div class="body">
+                                    <div class="cell">
+                                        {% if page.header.continue_link is sameas(false) %}
+                                            {{ page.content }}
+                                            {% if not truncate %}
+                                                {% set show_prev_next = true %}
+                                            {% endif %}
+                                        {% elseif truncate and page.summary != page.content %}
+                                            {{ page.summary }}
+                                            <p>
+                                                <a href="{{ page.url }}">Continue Reading...</a>
+                                            </p>
+                                        {% elseif truncate %}
+                                            {% if page.summary != page.content %}
+                                                {{ page.content|truncate(550) }}
+                                            {% else %}
+                                                {{ page.content }}
+                                            {% endif %}
+                                            <p>
+                                                <a href="{{ page.url }}">Continue Reading...</a>
+                                            </p>
+                                        {% else %}
+                                            {{ page.content }}
+                                            {% set show_prev_next = true %}
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="col">
 
@@ -95,13 +103,17 @@
 
         <p class="prev-next">
             {% if not page.isFirst %}
-                <a class="button" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Next Post</a>
+                <a class="button" href="{{ page.nextSibling.url }}">
+                    <i class="fa fa-chevron-left"></i>
+                    Next Post</a>
             {% endif %}
 
             {% if not page.isLast %}
-                <a class="button" href="{{ page.prevSibling.url }}">Previous Post <i class="fa fa-chevron-right"></i></a>
+                <a class="button" href="{{ page.prevSibling.url }}">Previous Post
+                    <i class="fa fa-chevron-right"></i>
+                </a>
             {% endif %}
         </p>
     {% endif %}
 
-    </div>
+</div>
