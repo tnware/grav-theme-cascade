@@ -1,3 +1,15 @@
+# v0.1.5
+## 01/27/2017
+
+1. [](#new)
+    * slight code enhancements
+2. [](#improved)
+    * Blog
+    * footer links
+3. [](#bugfix)
+    * Blog page was fluid
+    * Removed extra code
+
 # v0.1.4
 ## 07/25/2016
 
