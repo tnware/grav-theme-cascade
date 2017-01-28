@@ -1,6 +1,6 @@
 # Cascade
 
-## UPDATE: I am back after a hiatus. The latest release is in preparation for a complete re-structure of the code with the updated standards.
+## UPDATE 1/27/2017: I am back after a hiatus. The latest release is in preparation for a complete re-structure of the code with the updated standards.
 
 > Attention! Cascade for Grav is currently in a pre-release state. Some commits are stable, and some might have slight issues. Thank you for your understanding.
 
