@@ -2,6 +2,17 @@
 ## 01/27/2017
 
 1. [](#new)
+    * Version updated xD
+2. [](#improved)
+    * screnshot
+    * thumbnail
+3. [](#bugfix)
+    * none
+
+# v0.1.5
+## 01/27/2017
+
+1. [](#new)
     * slight code enhancements
 2. [](#improved)
     * Blog
