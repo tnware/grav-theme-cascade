@@ -35,7 +35,7 @@
                                         {% if page.taxonomy.tag %}
                                             <nav class="blocks">
                                                 {% for tag in page.taxonomy.tag %}
-                                                    <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }},</a>
+                                                    <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">#{{ tag }}</a>
                                                 {% endfor %}
                                             </nav>
                                         {% endif %}
