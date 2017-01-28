@@ -1,3 +1,14 @@
+# v0.1.7
+## 01/27/2017
+
+1. [](#new)
+    *  compliance
+2. [](#improved)
+    * screnshot
+    * thumbnail
+3. [](#bugfix)
+    * none
+
 # v0.1.6
 ## 01/27/2017
 
