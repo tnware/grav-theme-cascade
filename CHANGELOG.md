@@ -1,3 +1,13 @@
+# v0.1.8
+## 01/29/2017
+
+1. [](#new)
+    *  none
+2. [](#improved)
+    * none
+3. [](#bugfix)
+    * remove comma after tag
+
 # v0.1.7
 ## 01/27/2017
 
